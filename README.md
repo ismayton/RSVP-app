@@ -1,4 +1,24 @@
-# RSVP-app
-JS frontend Portfolio Project - SPA allowing users to RSVP for an event
+# README
 
-README TBD
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
