@@ -1,12 +1,12 @@
 *.rbc
 capybara-*.html
 .rspec
-/db/*.sqlite3
-/db/*.sqlite3-journal
-/db/*.sqlite3-[0-9]*
-/public/system
-/coverage/
-/spec/tmp
+backend/db/*.sqlite3
+backend/db/*.sqlite3-journal
+backend/db/*.sqlite3-[0-9]*
+backend/public/system
+backend/coverage/
+backend/spec/tmp
 *.orig
 rerun.txt
 pickle-email-*.html
@@ -18,8 +18,8 @@ pickle-email-*.html
 !/tmp/.keep
 
 # TODO Comment out this rule if you are OK with secrets being uploaded to the repo
-config/initializers/secret_token.rb
-config/master.key
+backend/config/initializers/secret_token.rb
+backend/config/master.key
 
 # Only include if you have production secrets in this file, which is no longer a Rails default
 # config/secrets.yml
