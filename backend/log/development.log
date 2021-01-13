@@ -381,3 +381,77 @@ Processing by EventsController#index as */*
 Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.5ms | Allocations: 2233)
 
 
+Started GET "/events" for ::1 at 2021-01-13 15:50:45 -0600
+  [1m[35m (7.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 136ms (Views: 111.9ms | ActiveRecord: 4.2ms | Allocations: 19673)
+
+
+Started GET "/events" for ::1 at 2021-01-13 15:51:26 -0600
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 27ms (Views: 22.3ms | ActiveRecord: 2.1ms | Allocations: 2251)
+
+
+Started GET "/events" for ::1 at 2021-01-13 15:51:48 -0600
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.4ms | Allocations: 2251)
+
+
+Started GET "/events" for ::1 at 2021-01-13 15:52:03 -0600
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.5ms | Allocations: 2254)
+
+
+Started GET "/events" for ::1 at 2021-01-13 15:52:16 -0600
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.3ms | Allocations: 2251)
+
+
+Started GET "/events" for ::1 at 2021-01-13 15:52:54 -0600
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.8ms | Allocations: 2233)
+
+
+Started GET "/events" for ::1 at 2021-01-13 15:53:04 -0600
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.7ms | Allocations: 2233)
+
+
+Started GET "/events" for ::1 at 2021-01-13 15:53:55 -0600
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.4ms | Allocations: 2233)
+
+
