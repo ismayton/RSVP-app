@@ -10,9 +10,24 @@ main {
 
 h1, h2, h3, h4 {
     padding: 10px;
-    
+
 }
+
 p {
     padding: 5px;
     line-height: 1px;
+}
+
+.event {
+    background-color: orange;
+    margin: 15px;
+}
+
+.user {
+    background-color: aquamarine;
+    margin-right: auto;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    max-width: 50%;
 }
