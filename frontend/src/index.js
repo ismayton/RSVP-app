@@ -20,19 +20,22 @@ function renderEvents(json) {
 function eventHTML(eventJson) {
     let event = document.createElement('div')
     event.classList.add('event')
+    event.id = eventJson.id
     event.innerHTML = `<h2>${eventJson.title}</h2>
     <p>Date: ${eventJson.date}</p>
     <p>Location: ${eventJson.location}</p>
     <p>Description: ${eventJson.description}</p>
     <p>Seats Remaining: ${eventJson.capacity - eventJson.users.length}</p>
     `
-    eventJson.users.map( user => event.appendChild(usersHTML(user)) )
     event.appendChild(eventFormHTML(eventJson))
+    
+    let ul = document.createElement('ul')
+    event.appendChild(ul)
+    eventJson.users.map( user => ul.appendChild(usersHTML(user)) )
     return event
 }
 
 // forms user class DOM objects from event.users //
-
 function usersHTML(user) {
     let userDiv = document.createElement('li')
     userDiv.classList.add('user')
@@ -44,8 +47,8 @@ function usersHTML(user) {
 function eventFormHTML(eventJson) {
     let form = document.createElement('form')
     form.classList.add('user-form')
-    form.id = eventJson.id
-    form.innerHTML = `<h4>RSVP for this Event</h4>
+    
+    form.innerHTML = `<h4>RSVP for ${eventJson.title}</h4>
         <label>Name: </label>
         <input type="text" name="name"></br>
         <label>Email: </label>
@@ -55,23 +58,31 @@ function eventFormHTML(eventJson) {
 
     form.addEventListener( "submit", function(event) {
         event.preventDefault();
+        
         let formData = new FormData(this);
-        formData.append("event_id", form.id)
-        console.log(...formData)
-        addUser(formData);
+        formData.append("event_id", this.parentElement.id)
+
+        postUser(formData);
+        // console.log(user)
+        // let ul = this.parentElement.querySelector('ul')
+        // ul.appendChild(user)
     })
     return form
 }
 
-function addUser(formData) {
+function postUser(formData) {
     let configObj = {
         method: 'post',
         body: formData
     }
-    let user = fetch(USERS_URL, configObj)
-    .then(function(response) { return response.json(); })
-    .then(function(json){ console.log(json) })
 
-    console.log(user)
+    return fetch(USERS_URL, configObj)
+    .then(function(response) { return response.json(); })
+    .then(function(json) { renderUserFromJson(json) })
 }
- 
+
+function renderUserFromJson(json) {
+    let userDiv = usersHTML(json.user)
+    let ul = document.getElementById(json.event_id).querySelector('ul')
+    ul.appendChild(userDiv)
+}
