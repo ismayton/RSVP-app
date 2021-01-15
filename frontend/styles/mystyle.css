@@ -31,3 +31,10 @@ p {
     padding: 15px;
     max-width: 50%;
 }
+
+.user-form {
+    padding: 15px;
+    background-color: rgb(1, 192, 1);
+    max-width: 30%;
+    margin: auto;
+}
