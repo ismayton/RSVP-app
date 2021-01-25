@@ -38,3 +38,8 @@ p {
     max-width: 40%;
     margin: auto;
 }
+
+.remove-user {
+    float: right;
+    margin-top: -12px;
+}
