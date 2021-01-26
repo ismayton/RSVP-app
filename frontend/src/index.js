@@ -20,12 +20,18 @@ function eventHTML(eventJson) {
     let event = document.createElement('div')
     event.classList.add('event')
     event.id = eventJson.id
+
+    let seatsRemaining = eventJson.capacity - eventJson.users.length
+    let percentFull = ((eventJson.capacity - seatsRemaining) / eventJson.capacity) * 100
+    
     event.innerHTML = `<h2>${eventJson.title}</h2>
     <p>Date: ${eventJson.date}</p>
     <p>Location: ${eventJson.location}</p>
     <p>Description: ${eventJson.description}</p>
-    <p>Seats Remaining: ${eventJson.capacity - eventJson.users.length}</p>
+    <p>Seats Remaining: ${seatsRemaining}</p>
+    <div class="status-bar"><div class="status-bar-fill" style="width:${percentFull}%"></div></div>
     `
+
     event.appendChild(eventFormHTML(eventJson))
     
     let ul = document.createElement('ul')
@@ -95,13 +101,15 @@ function renderUserFromJson(json) {
     } else {
         let userDiv = usersHTML(json.user)
         userDiv.id = `event${json.event_id}user${json.user.id}`
-        let ul = document.getElementById(json.event_id).querySelector('ul')
+        let event = document.getElementById(json.event_id)
+        
+        let ul = event.querySelector('ul')
         ul.appendChild(userDiv)
+        updateStatusBar(json)
     }
 }
 
 function removeUser(userDiv) {
-    console.log(`removing ${userDiv.id}`)
 
     let configObj = {
         headers: {
@@ -127,6 +135,12 @@ function removeUserFromJson(json) {
     } else {
         let user = document.getElementById(`event${json.event_id}user${json.user.id}`)
         user.remove()
+        updateStatusBar(json)
     }
 }
 
+function updateStatusBar(json) {
+    let event = document.getElementById(json.event_id)
+    let statusBar = event.getElementsByClassName('status-bar-fill')[0]
+    statusBar.style.width = `${100 - json.percent_full}%`
+}

@@ -21,6 +21,7 @@ p {
 .event {
     background-color: orange;
     margin: 15px;
+    padding: 20px;
 }
 
 .user {
@@ -42,4 +43,21 @@ p {
 .remove-user {
     float: right;
     margin-top: -12px;
+}
+
+.status-bar {
+    width: 300px;
+    height: 25px;
+    background-color: white;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    z-index: 4;
+}
+
+.status-bar-fill {
+    background-color: purple;
+    width:0;
+    height: inherit;
+    z-index: 0;
 }
