@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
     def create
-        puts params
         user = User.find_or_create_by(email: params[:email], name: params[:name])
         event = Event.find(params[:event_id])
 
@@ -8,7 +7,8 @@ class UsersController < ApplicationController
         if user.valid?
             if event
                 user.events << event
-                render json: { user: user, event_id: event.id }
+                percent_full = (event.capacity.to_f - event.users.count.to_f) / event.capacity.to_f * 100
+                render json: { user: user, event_id: event.id, percent_full: percent_full }
             else
                 render json: user, except: [:created_at, :updated_at]
             end 
@@ -19,12 +19,12 @@ class UsersController < ApplicationController
     end
 
     def update
-        puts params
         user = User.find(params[:user_id])
         event = Event.find(params[:event_id])
         event.users.delete(user)
+        percent_full = (event.capacity.to_f - event.users.count.to_f) / event.capacity.to_f * 100
 
-        render json: { user: user, event_id: event.id}
+        render json: { user: user, event_id: event.id, percent_full: percent_full}
     end
 
 end
