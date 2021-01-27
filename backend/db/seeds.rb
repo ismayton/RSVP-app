@@ -1,14 +1,55 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+EVENTS = [
+    {
+        title: "Third Space Music Concert", 
+        date: "Feb 21 7:30pm", 
+        description: "Charity Livestream", 
+        location: "Steinway Center", 
+        capacity: 50
+    },
+    {
+        title: "Museum Event", 
+        date: "March 14 5:30pm", 
+        description: "Gallery Opening", 
+        location: "MFAH", 
+        capacity: 25
+    }
+]
 
-event = Event.create(title: "Third Space Music Concert", date: "Feb 21 7:30pm", description: "Charity Livestream", location: "Steinway Center", capacity: 50)
-user = User.create(name: "Ian Mayton", email: "ianmayton@email.com")
-admin = Admin.create(name: "Mr. Admin", email: "business@email.com", password: "super-secure")
+def create_events
+    admin = Admin.find_or_create_by(name: "Mr. Admin", email: "business@email.com", password: "super-secure")
 
-admin.events << event
-user.events << event
+    EVENTS.each do |event_params|
+        event = Event.find_or_create_by(event_params)
+        admin.events << event
+        event.save
+    end
+end
+
+USERS = {
+    {name: "Ian", email: "ian@email.com"} => [1],
+    {name: "Jim", email: "jim@email.com"} => [1, 2],
+    {name: "Bob", email: "bob@email.com"} => [2]
+}
+
+def create_users
+    USERS.each do |user_params, event_ids|
+        user = User.find_or_create_by(user_params)
+        event_ids.each do |event_id|
+            user.events << Event.find(event_id)
+        end
+        user.save
+    end
+end
+
+def populate_test_db
+    create_events
+    create_users
+end
+
+populate_test_db
+
+
+
+
+
+
