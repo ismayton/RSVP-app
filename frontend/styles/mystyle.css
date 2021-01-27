@@ -45,6 +45,10 @@ p {
     margin-top: -12px;
 }
 
+.seats-remaining {
+    text-align: center;
+}
+
 .status-bar {
     width: 300px;
     height: 25px;

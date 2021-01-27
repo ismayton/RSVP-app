@@ -28,7 +28,7 @@ function eventHTML(eventJson) {
     <p>Date: ${eventJson.date}</p>
     <p>Location: ${eventJson.location}</p>
     <p>Description: ${eventJson.description}</p>
-    <p>Seats Remaining: ${seatsRemaining}</p>
+    <p class="seats-remaining">Seats Remaining: ${seatsRemaining}</p>
     <div class="status-bar"><div class="status-bar-fill" style="width:${percentFull}%"></div></div>
     `
 
@@ -106,6 +106,7 @@ function renderUserFromJson(json) {
         let ul = event.querySelector('ul')
         ul.appendChild(userDiv)
         updateStatusBar(json)
+        updateSeatCount(json)
     }
 }
 
@@ -136,6 +137,7 @@ function removeUserFromJson(json) {
         let user = document.getElementById(`event${json.event_id}user${json.user.id}`)
         user.remove()
         updateStatusBar(json)
+        updateSeatCount(json)
     }
 }
 
@@ -143,4 +145,10 @@ function updateStatusBar(json) {
     let event = document.getElementById(json.event_id)
     let statusBar = event.getElementsByClassName('status-bar-fill')[0]
     statusBar.style.width = `${100 - json.percent_full}%`
+}
+
+function updateSeatCount(json) {
+    let event = document.getElementById(json.event_id)
+    let seatCount = event.getElementsByClassName('seats-remaining')[0]
+    seatCount.innerText = `Seats Remaining: ${json.remaining}`
 }
