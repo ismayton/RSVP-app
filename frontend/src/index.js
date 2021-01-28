@@ -2,53 +2,101 @@ const BASE_URL = "http://localhost:3000"
 const EVENTS_URL = `${BASE_URL}/events`
 const USERS_URL = `${BASE_URL}/users`
 
-document.addEventListener('DOMContentLoaded', fetchEvents() )
+class Event {
+    constructor(id, title, date, location, description, capacity, users) {
+        this.id = id;
+        this.title = title;
+        this.date = date;
+        this.location = location;
+        this.description = description;
+        this.capacity = capacity;
+        this.users = users;
+    }
 
-function fetchEvents() {
+    static eventFromJson(eventJson) {
+        return new Event(eventJson.id, eventJson.title, eventJson.date, eventJson.location, eventJson.description, eventJson.capacity, eventJson.users)
+    }
+
+    get seatsRemaining() {
+        return this.capacity - this.users.length
+    }
+
+    get percentFull() {
+        return ((this.capacity - this.seatsRemaining) / this.capacity) * 100
+    }
+}
+
+class User {
+    constructor(name, email, id, event_id) {
+        this.name = name;
+        this.email = email;
+        this.id = id;
+        this.event_id = event_id
+    }
+    
+    static userFromJson(json) {
+        return new User(json.user.name, json.user.email, json.user.id, json.event.id)
+    }
+
+    get dom_id() {
+        return `event${this.event_id}user${this.id}`
+    }
+}
+
+// Render on DOM loaded //
+document.addEventListener('DOMContentLoaded', function fetchEvents() {
     return fetch(EVENTS_URL)
     .then(function(response) { return response.json(); })
     .then(function(json){ renderEvents(json) })
-}
+} )
+
+// EVENT FUNCTIONS //
 
 function renderEvents(json) {
     const main = document.querySelector('main')
-    json.map( eventJson => main.appendChild(eventHTML(eventJson)) )
+    json.map( eventJson => {
+        main.appendChild(renderEventInDOM(eventJson)) 
+    })
 }
 
-// Event functions: render event from Json, render form for adding user //
-function eventHTML(eventJson) {
-    let event = document.createElement('div')
-    event.classList.add('event')
-    event.id = eventJson.id
+// Render individual Event from specific event's Json //
+function renderEventInDOM(eventJson) {
+    let event = Event.eventFromJson(eventJson)
 
-    let seatsRemaining = eventJson.capacity - eventJson.users.length
-    let percentFull = ((eventJson.capacity - seatsRemaining) / eventJson.capacity) * 100
-    
-    event.innerHTML = `<h2>${eventJson.title}</h2>
-    <p>Date: ${eventJson.date}</p>
-    <p>Location: ${eventJson.location}</p>
-    <p>Description: ${eventJson.description}</p>
-    <p class="seats-remaining">Seats Remaining: ${seatsRemaining}</p>
-    <div class="status-bar"><div class="status-bar-fill" style="width:${percentFull}%"></div></div>
-    `
-
-    event.appendChild(eventFormHTML(eventJson))
+    let eventDiv = document.createElement('div')
+    eventDiv.classList.add('event')
+    eventDiv.id = event.id  
+    eventDiv.innerHTML = eventHTML(event)
+    eventDiv.appendChild(eventFormHTML(event))
     
     let ul = document.createElement('ul')
-    event.appendChild(ul)
-    eventJson.users.map( user => {
-        userDiv = usersHTML(user)
-        userDiv.id = `event${event.id}user${user.id}`
+    eventDiv.appendChild(ul)
+
+    event.users.map( userJson => {
+        let user = new User(userJson.name, userJson.email, userJson.id, event.id)
+        let userDiv = userHTML(user)
         ul.appendChild(userDiv)
     })
-    return event
+    return eventDiv
 }
 
-function eventFormHTML(eventJson) {
+// Event's innerHTML generator from event object //
+function eventHTML(event) {
+    return `<h2>${event.title}</h2>
+    <p>Date: ${event.date}</p>
+    <p>Location: ${event.location}</p>
+    <p>Description: ${event.description}</p>
+    <p class="seats-remaining">Seats Remaining: ${event.seatsRemaining}</p>
+    <div class="status-bar"><div class="status-bar-fill" style="width:${event.percentFull}%"></div></div>
+    `
+}
+
+// event's formHTML generator from event object //
+function eventFormHTML(event) {
     let form = document.createElement('form')
     form.classList.add('user-form')
     
-    form.innerHTML = `<h4>RSVP for ${eventJson.title}</h4>
+    form.innerHTML = `<h4>RSVP for ${event.title}</h4>
         <label>Name: </label>
         <input type="text" name="name"></br>
         <label>Email: </label>
@@ -56,25 +104,55 @@ function eventFormHTML(eventJson) {
         <input type="submit" value="submit">
         </form>`
 
-    form.addEventListener( "submit", function(event) {
-        event.preventDefault();
+    form.addEventListener( "submit", function(response) {
+        response.preventDefault();
         let formData = new FormData(this);
-        formData.append("event_id", this.parentElement.id)
+        formData.append("event_id", event.id)
         postUser(formData);
     })
     return form
 }
 
-// User functions: render in DOM, fetch-post new, render from fetch //
-function usersHTML(user) {
+// USER FUNCTIONS //
+
+// fetch request to post new user from event form, renders in DOM from json //
+function postUser(formData) {
+    let configObj = {
+        method: 'post',
+        body: formData
+    }
+    return fetch(USERS_URL, configObj)
+    .then( response => { return response.json(); })
+    .then( json =>  { renderUserInDOM(json) })
+}
+
+
+function renderUserInDOM(json) {
+    if (json.error) {
+        alert(json.error)
+    } else {
+        let user = User.userFromJson(json)
+        let userDiv = userHTML(user)
+        
+        let ul = document.getElementById(json.event.id).querySelector('ul')
+        ul.appendChild(userDiv)
+        updateStatusBar(json)
+        updateSeatCount(json)
+    }
+}
+
+// returns a userDiv from a user object //
+function userHTML(user) {
     let userDiv = document.createElement('li')
     userDiv.classList.add('user')
+    userDiv.id = user.dom_id
     userDiv.innerText = `Name: ${user.name}
     Email: ${user.email}`
     addDeleteButton(userDiv)
     return userDiv
 }
 
+// adds delete button and listener to a userDiv //
 function addDeleteButton(userDiv) {
     let button = document.createElement('button')
     button.classList.add('remove-user')
@@ -85,33 +163,8 @@ function addDeleteButton(userDiv) {
     userDiv.appendChild(button)
 }
 
-function postUser(formData) {
-    let configObj = {
-        method: 'post',
-        body: formData
-    }
-    return fetch(USERS_URL, configObj)
-    .then( response => { return response.json(); })
-    .then( json =>  { renderUserFromJson(json) })
-}
-
-function renderUserFromJson(json) {
-    if (json.error) {
-        alert(json.error)
-    } else {
-        let userDiv = usersHTML(json.user)
-        userDiv.id = `event${json.event_id}user${json.user.id}`
-        let event = document.getElementById(json.event_id)
-        
-        let ul = event.querySelector('ul')
-        ul.appendChild(userDiv)
-        updateStatusBar(json)
-        updateSeatCount(json)
-    }
-}
-
+// sends fetch request to delete user, calls to remove userDiv from DOM //
 function removeUser(userDiv) {
-
     let configObj = {
         headers: {
             'Accept': 'application/json',
@@ -125,30 +178,34 @@ function removeUser(userDiv) {
     .then( json =>  { removeUserFromJson(json) })
 }
 
-function parseUserId(userId) {
-    let idArray = userId.id.split("event")[1].split("user")
+// reverse-engineers userDiv id value into array for fetch request //
+function parseUserId(userDiv) {
+    let idArray = userDiv.id.split("event")[1].split("user")
     return {"event_id": idArray[0], "user_id": idArray[1]}
 }
 
-function removeUserFromJson(json) {
+// finds userDiv from json data and removes userDiv from DOM, updating seat count and status bar //
+function removeUserFromJson(json) {    
     if (json.error) {
         alert(json.error)
     } else {
-        let user = document.getElementById(`event${json.event_id}user${json.user.id}`)
-        user.remove()
+        let user = User.userFromJson(json)
+        document.getElementById(`${user.dom_id}`).remove()
         updateStatusBar(json)
         updateSeatCount(json)
     }
 }
 
+// STATUS BAR AND SEAT COUNT //
+
 function updateStatusBar(json) {
-    let event = document.getElementById(json.event_id)
-    let statusBar = event.getElementsByClassName('status-bar-fill')[0]
-    statusBar.style.width = `${100 - json.percent_full}%`
+    let event = Event.eventFromJson(json.event)
+    let statusBar = document.getElementById(event.id).getElementsByClassName('status-bar-fill')[0]
+    statusBar.style.width = `${100 - event.percent_full}%`
 }
 
 function updateSeatCount(json) {
-    let event = document.getElementById(json.event_id)
-    let seatCount = event.getElementsByClassName('seats-remaining')[0]
-    seatCount.innerText = `Seats Remaining: ${json.remaining}`
+    let event = Event.eventFromJson(json.event)
+    let seatCount = document.getElementById(event.id).getElementsByClassName('seats-remaining')[0]
+    seatCount.innerText = `Seats Remaining: ${event.seatsRemaining}`
 }
