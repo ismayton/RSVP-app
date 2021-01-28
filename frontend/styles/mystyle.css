@@ -1,31 +1,79 @@
+
+:root {
+    --background-hue: #edeae5;
+
+    /* header */
+    --primary-hue: #1c2127; 
+
+    /* gradient 2 */
+    --secondary-hue: transparent;
+
+    /* status bar */
+    --tertiary-hue: #c12422;
+
+    /* form */
+    --quaternary-hue: #cdc04f;
+
+    /* event/gradient 1 */
+    --quinary-hue: rgb(238, 213, 171);
+
+    --primary-text-color: white;
+}
+
 body {
-    background: #999999;
+    background-image: url(../img/envelope-background.png) ;
+    background-color: var(--background-hue);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% -5%;
+    background-size: 99.9%;
 }
 
 main {
-    max-width: 80%;
-    margin: auto;
-    background-color: white;
+    margin: auto;  
+    z-index: -1;  
 }
 
-h1, h2, h3, h4 {
-    padding: 10px;
+.header {
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+    background-color: var(--primary-hue);
+    color: var(--background-hue);
+  }
 
+h1, h2, h3, h4 {
+    font-family: "lucida handwriting", garamond;
+    padding: 10px;
+    text-align: center;
 }
 
 p {
+    font-family: garamond;
     padding: 5px;
     line-height: 1px;
 }
 
 .event {
-    background-color: orange;
-    margin: 15px;
+    background-image: url(../img/paper-texture.jpg);
+    background-size: cover;
+    background-color: var(--background-hue);
+    border-radius: 4px;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 75px;
     padding: 20px;
+    max-width: 500px;
+    width: auto; 
 }
 
+ul {
+    background-color: var(--secondary-hue);
+    border-radius: 10px;
+
+}
 .user {
-    background-color: aquamarine;
+    background-color: transparent;
     margin-right: auto;
     margin-left: 15px;
     margin-bottom: 15px;
@@ -35,9 +83,11 @@ p {
 
 .user-form {
     padding: 15px;
-    background-color: rgb(1, 192, 1);
+    background-color: var(--quaternary-hue);
     max-width: 40%;
     margin: auto;
+    border-radius: 10px;
+
 }
 
 .remove-user {
@@ -52,16 +102,23 @@ p {
 .status-bar {
     width: 300px;
     height: 25px;
-    background-color: white;
+    background-color: var(--background-hue);
     margin: auto;
     margin-top: 25px;
     margin-bottom: 25px;
-    z-index: 4;
 }
 
 .status-bar-fill {
-    background-color: purple;
+    background-color: var(--tertiary-hue);
     width:0;
     height: inherit;
-    z-index: 0;
 }
+
+#overlay {
+    position: fixed;
+    width: 100%;
+    min-width: 300px;
+    margin-left: -9px;
+  }
+
+  
