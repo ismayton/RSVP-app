@@ -16471,3 +16471,1042 @@ Processing by EventsController#index as */*
 Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 1.4ms | Allocations: 3942)
 
 
+Started GET "/events" for ::1 at 2021-01-29 13:16:26 -0600
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (5.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 2]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 347ms (Views: 313.3ms | ActiveRecord: 9.1ms | Allocations: 21513)
+
+
+Started GET "/events" for ::1 at 2021-01-29 13:18:12 -0600
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 2]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 1.2ms | Allocations: 3961)
+
+
+Started GET "/events" for ::1 at 2021-01-29 13:19:38 -0600
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 2]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 282ms (Views: 247.6ms | ActiveRecord: 16.7ms | Allocations: 21516)
+
+
+Started GET "/events" for ::1 at 2021-01-29 13:21:43 -0600
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 2]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.9ms | Allocations: 3961)
+
+
+Started GET "/events" for ::1 at 2021-01-29 13:23:57 -0600
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 2]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 53ms (Views: 46.6ms | ActiveRecord: 1.0ms | Allocations: 3960)
+
+
+Started POST "/users" for ::1 at 2021-01-29 13:24:01 -0600
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "event_id"=>"undefined"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."name" = ? LIMIT ?[0m  [["email", ""], ["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 404 Not Found in 53ms (ActiveRecord: 3.1ms | Allocations: 6365)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=undefined):
+  
+app/controllers/users_controller.rb:4:in `create'
+Started PATCH "/users/event1user19" for ::1 at 2021-01-29 13:24:04 -0600
+Processing by UsersController#update as JSON
+  Parameters: {"event_id"=>"1", "user_id"=>"19", "id"=>"event1user19", "user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `update'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mReservation Destroy (3.8ms)[0m  [1m[31mDELETE FROM "reservations" WHERE "reservations"."event_id" = ? AND "reservations"."user_id" = ?[0m  [["event_id", 1], ["user_id", 19]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+Completed 200 OK in 37ms (Views: 4.5ms | ActiveRecord: 6.4ms | Allocations: 4128)
+
+
+Started GET "/events" for ::1 at 2021-01-29 13:24:56 -0600
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (6.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 2]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 34ms (Views: 26.4ms | ActiveRecord: 7.1ms | Allocations: 3807)
+
+
+Started POST "/users" for ::1 at 2021-01-29 13:25:09 -0600
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Ian", "email"=>"ian@email.com", "event_id"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."name" = ? LIMIT ?[0m  [["email", "ian@email.com"], ["name", "Ian"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.7ms | Allocations: 1308)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=undefined):
+  
+app/controllers/users_controller.rb:4:in `create'
+Started GET "/events" for ::1 at 2021-01-29 13:26:08 -0600
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 2]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 1.0ms | Allocations: 3806)
+
+
+Started POST "/users" for ::1 at 2021-01-29 13:26:18 -0600
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Ian", "email"=>"ian@email.com", "event_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."name" = ? LIMIT ?[0m  [["email", "ian@email.com"], ["name", "Ian"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "ian@email.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["event_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mReservation Create (2.8ms)[0m  [1m[32mINSERT INTO "reservations" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["event_id", 1], ["created_at", "2021-01-29 19:26:18.341986"], ["updated_at", "2021-01-29 19:26:18.341986"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 101ms (Views: 0.8ms | ActiveRecord: 5.5ms | Allocations: 11413)
+
+
+Started POST "/users" for ::1 at 2021-01-29 13:26:23 -0600
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Ian", "email"=>"ian@email.com", "event_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."name" = ? LIMIT ?[0m  [["email", "ian@email.com"], ["name", "Ian"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "ian@email.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["event_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 3172)
+
+
+Started POST "/users" for ::1 at 2021-01-29 13:27:11 -0600
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Bob", "email"=>"bob@email.com", "event_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."name" = ? LIMIT ?[0m  [["email", "bob@email.com"], ["name", "Bob"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "bob@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["event_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mReservation Create (0.9ms)[0m  [1m[32mINSERT INTO "reservations" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["event_id", 1], ["created_at", "2021-01-29 19:27:11.973268"], ["updated_at", "2021-01-29 19:27:11.973268"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 27ms (Views: 1.0ms | ActiveRecord: 3.2ms | Allocations: 6490)
+
+
+Started GET "/events" for ::1 at 2021-01-29 13:27:15 -0600
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 2]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.7ms | Allocations: 4079)
+
+
+Started POST "/users" for ::1 at 2021-01-29 13:27:30 -0600
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Jim", "email"=>"jim@email.com", "event_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."name" = ? LIMIT ?[0m  [["email", "jim@email.com"], ["name", "Jim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "jim@email.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["event_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mReservation Create (0.7ms)[0m  [1m[32mINSERT INTO "reservations" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["event_id", 1], ["created_at", "2021-01-29 19:27:30.397319"], ["updated_at", "2021-01-29 19:27:30.397319"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 25ms (Views: 0.9ms | ActiveRecord: 6.9ms | Allocations: 6487)
+
+
+Started GET "/events" for ::1 at 2021-01-29 13:28:13 -0600
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 2]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.7ms | Allocations: 4214)
+
+
+Started POST "/users" for ::1 at 2021-01-29 13:28:24 -0600
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Jack", "email"=>"jack@email.com", "event_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."name" = ? LIMIT ?[0m  [["email", "jack@email.com"], ["name", "Jack"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "jack@email.com"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["event_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mReservation Create (0.7ms)[0m  [1m[32mINSERT INTO "reservations" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 5], ["event_id", 1], ["created_at", "2021-01-29 19:28:24.215199"], ["updated_at", "2021-01-29 19:28:24.215199"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 28ms (Views: 0.9ms | ActiveRecord: 4.1ms | Allocations: 6490)
+
+
+Started POST "/users" for ::1 at 2021-01-29 13:28:37 -0600
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Julio", "email"=>"julio@email.com", "event_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."name" = ? LIMIT ?[0m  [["email", "julio@email.com"], ["name", "Julio"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "julio@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Julio"], ["email", "julio@email.com"], ["created_at", "2021-01-29 19:28:37.636684"], ["updated_at", "2021-01-29 19:28:37.636684"]]
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "julio@email.com"], ["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["event_id", 1], ["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mReservation Create (0.7ms)[0m  [1m[32mINSERT INTO "reservations" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 22], ["event_id", 1], ["created_at", "2021-01-29 19:28:37.653277"], ["updated_at", "2021-01-29 19:28:37.653277"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 32ms (Views: 0.8ms | ActiveRecord: 6.9ms | Allocations: 10157)
+
+
+Started GET "/events" for ::1 at 2021-01-29 13:29:45 -0600
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 2]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 24ms (Views: 17.4ms | ActiveRecord: 6.3ms | Allocations: 4484)
+
+
+Started PATCH "/users/event1user3" for ::1 at 2021-01-29 13:29:51 -0600
+Processing by UsersController#update as JSON
+  Parameters: {"event_id"=>"1", "user_id"=>"3", "id"=>"event1user3", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `update'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mReservation Destroy (0.8ms)[0m  [1m[31mDELETE FROM "reservations" WHERE "reservations"."event_id" = ? AND "reservations"."user_id" = ?[0m  [["event_id", 1], ["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+Completed 200 OK in 16ms (Views: 1.3ms | ActiveRecord: 3.1ms | Allocations: 3786)
+
+
+Started PATCH "/users/event1user6" for ::1 at 2021-01-29 13:30:23 -0600
+Processing by UsersController#update as JSON
+  Parameters: {"event_id"=>"1", "user_id"=>"6", "id"=>"event1user6", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `update'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mReservation Destroy (0.5ms)[0m  [1m[31mDELETE FROM "reservations" WHERE "reservations"."event_id" = ? AND "reservations"."user_id" = ?[0m  [["event_id", 1], ["user_id", 6]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 2.3ms | Allocations: 3786)
+
+
+Started PATCH "/users/event1user2" for ::1 at 2021-01-29 13:31:15 -0600
+Processing by UsersController#update as JSON
+  Parameters: {"event_id"=>"1", "user_id"=>"2", "id"=>"event1user2", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `update'
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mReservation Destroy (0.6ms)[0m  [1m[31mDELETE FROM "reservations" WHERE "reservations"."event_id" = ? AND "reservations"."user_id" = ?[0m  [["event_id", 1], ["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+Completed 200 OK in 14ms (Views: 0.7ms | ActiveRecord: 2.6ms | Allocations: 3786)
+
+
+Started PATCH "/users/event2user21" for ::1 at 2021-01-29 13:31:38 -0600
+Processing by UsersController#update as JSON
+  Parameters: {"event_id"=>"2", "user_id"=>"21", "id"=>"event2user21", "user"=>{}}
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `update'
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mReservation Destroy (0.9ms)[0m  [1m[31mDELETE FROM "reservations" WHERE "reservations"."event_id" = ? AND "reservations"."user_id" = ?[0m  [["event_id", 2], ["user_id", 21]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+Completed 200 OK in 75ms (Views: 51.6ms | ActiveRecord: 10.3ms | Allocations: 3787)
+
+
+Started GET "/events" for ::1 at 2021-01-29 13:32:11 -0600
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 2]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.7ms | Allocations: 3944)
+
+
+Started POST "/users" for ::1 at 2021-01-29 13:32:20 -0600
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Bill", "email"=>"bill@email.com", "event_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."name" = ? LIMIT ?[0m  [["email", "bill@email.com"], ["name", "Bill"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "bill@email.com"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["event_id", 2], ["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mReservation Create (1.0ms)[0m  [1m[32mINSERT INTO "reservations" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 6], ["event_id", 2], ["created_at", "2021-01-29 19:32:20.583224"], ["updated_at", "2021-01-29 19:32:20.583224"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 27ms (Views: 1.0ms | ActiveRecord: 3.5ms | Allocations: 6487)
+
+
+Started GET "/events" for ::1 at 2021-01-29 13:33:05 -0600
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 2]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 1.3ms | Allocations: 4079)
+
+
+Started POST "/users" for ::1 at 2021-01-29 13:33:13 -0600
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"John", "email"=>"john@email.com", "event_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."name" = ? LIMIT ?[0m  [["email", "john@email.com"], ["name", "John"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "john@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "John"], ["email", "john@email.com"], ["created_at", "2021-01-29 19:33:13.661225"], ["updated_at", "2021-01-29 19:33:13.661225"]]
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "john@email.com"], ["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["event_id", 2], ["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mReservation Create (0.9ms)[0m  [1m[32mINSERT INTO "reservations" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 23], ["event_id", 2], ["created_at", "2021-01-29 19:33:13.691415"], ["updated_at", "2021-01-29 19:33:13.691415"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 44ms (Views: 0.9ms | ActiveRecord: 5.5ms | Allocations: 10084)
+
+
+Started POST "/users" for ::1 at 2021-01-29 13:35:16 -0600
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Jack", "email"=>"jack@email.com", "event_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."name" = ? LIMIT ?[0m  [["email", "jack@email.com"], ["name", "Jack"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "jack@email.com"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (4.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["event_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+Completed 200 OK in 31ms (Views: 0.4ms | ActiveRecord: 5.7ms | Allocations: 3170)
+
+
+Started POST "/users" for ::1 at 2021-01-29 13:35:24 -0600
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Jimmy", "email"=>"jimmy@email.com", "event_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."name" = ? LIMIT ?[0m  [["email", "jimmy@email.com"], ["name", "Jimmy"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "jimmy@email.com"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (2.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["event_id", 1], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mReservation Create (1.6ms)[0m  [1m[32mINSERT INTO "reservations" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 4], ["event_id", 1], ["created_at", "2021-01-29 19:35:24.020966"], ["updated_at", "2021-01-29 19:35:24.020966"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 34ms (Views: 5.2ms | ActiveRecord: 6.0ms | Allocations: 6487)
+
+
+Started GET "/events" for ::1 at 2021-01-29 13:35:44 -0600
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 2]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.8ms | Allocations: 4349)
+
+
+Started PATCH "/users/event1user4" for ::1 at 2021-01-29 13:35:49 -0600
+Processing by UsersController#update as JSON
+  Parameters: {"event_id"=>"1", "user_id"=>"4", "id"=>"event1user4", "user"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `update'
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `update'
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mReservation Destroy (9.1ms)[0m  [1m[31mDELETE FROM "reservations" WHERE "reservations"."event_id" = ? AND "reservations"."user_id" = ?[0m  [["event_id", 1], ["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+Completed 200 OK in 42ms (Views: 6.8ms | ActiveRecord: 12.1ms | Allocations: 3786)
+
+
+Started GET "/events" for ::1 at 2021-01-29 13:42:15 -0600
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 2]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 135ms (Views: 117.0ms | ActiveRecord: 2.9ms | Allocations: 16921)
+
+
+Started POST "/users" for ::1 at 2021-01-29 13:42:27 -0600
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"rob", "email"=>"rob@email.com", "event_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."name" = ? LIMIT ?[0m  [["email", "rob@email.com"], ["name", "rob"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "rob@email.com"], ["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["event_id", 1], ["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mReservation Create (3.4ms)[0m  [1m[32mINSERT INTO "reservations" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 21], ["event_id", 1], ["created_at", "2021-01-29 19:42:27.904685"], ["updated_at", "2021-01-29 19:42:27.904685"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 200 OK in 46ms (Views: 1.2ms | ActiveRecord: 6.9ms | Allocations: 9822)
+
+
+Started GET "/events" for ::1 at 2021-01-29 13:48:13 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 2]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 132ms (Views: 120.1ms | ActiveRecord: 4.2ms | Allocations: 17006)
+
+
+Started GET "/events" for ::1 at 2021-01-29 13:48:44 -0600
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 2]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 2.5ms | Allocations: 4349)
+
+
+Started PATCH "/users/event1user15" for ::1 at 2021-01-29 13:48:48 -0600
+  
+SyntaxError (/Users/ismayton/Flatiron/portfolio/RSVP-app/backend/app/controllers/users_controller.rb:8: syntax error, unexpected tIDENTIFIER, expecting '}'
+...:created_at, :updated_at] event: event, event_users: event.u...
+...                          ^~~~~
+/Users/ismayton/Flatiron/portfolio/RSVP-app/backend/app/controllers/users_controller.rb:8: syntax error, unexpected '}', expecting end
+...ent, event_users: event.users }
+...                              ^):
+  
+app/controllers/users_controller.rb:8: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/controllers/users_controller.rb:8: syntax error, unexpected '}', expecting end
+app/controllers/users_controller.rb:8: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/controllers/users_controller.rb:8: syntax error, unexpected '}', expecting end
+Started PATCH "/users/event1user1" for ::1 at 2021-01-29 13:48:59 -0600
+  
+SyntaxError (/Users/ismayton/Flatiron/portfolio/RSVP-app/backend/app/controllers/users_controller.rb:8: syntax error, unexpected tIDENTIFIER, expecting '}'
+...:created_at, :updated_at] event: event, event_users: event.u...
+...                          ^~~~~
+/Users/ismayton/Flatiron/portfolio/RSVP-app/backend/app/controllers/users_controller.rb:8: syntax error, unexpected '}', expecting end
+...ent, event_users: event.users }
+...                              ^):
+  
+app/controllers/users_controller.rb:8: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/controllers/users_controller.rb:8: syntax error, unexpected '}', expecting end
+app/controllers/users_controller.rb:8: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/controllers/users_controller.rb:8: syntax error, unexpected '}', expecting end
+Started GET "/events" for ::1 at 2021-01-29 13:49:31 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 2]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 251ms (Views: 209.2ms | ActiveRecord: 8.4ms | Allocations: 17967)
+
+
+Started PATCH "/users/event1user15" for ::1 at 2021-01-29 13:49:37 -0600
+Processing by UsersController#update as JSON
+  Parameters: {"event_id"=>"1", "user_id"=>"15", "id"=>"event1user15", "user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `update'
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `update'
+  [1m[35m (2.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mReservation Destroy (25.5ms)[0m  [1m[31mDELETE FROM "reservations" WHERE "reservations"."event_id" = ? AND "reservations"."user_id" = ?[0m  [["event_id", 1], ["user_id", 15]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+Completed 200 OK in 62ms (Views: 0.6ms | ActiveRecord: 31.6ms | Allocations: 4229)
+
+
+Started GET "/events" for ::1 at 2021-01-29 13:50:27 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 2]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 175ms (Views: 148.6ms | ActiveRecord: 16.0ms | Allocations: 21552)
+
+
+Started PATCH "/users/event1user21" for ::1 at 2021-01-29 13:50:33 -0600
+Processing by UsersController#update as JSON
+  Parameters: {"event_id"=>"1", "user_id"=>"21", "id"=>"event1user21", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `update'
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mReservation Destroy (0.5ms)[0m  [1m[31mDELETE FROM "reservations" WHERE "reservations"."event_id" = ? AND "reservations"."user_id" = ?[0m  [["event_id", 1], ["user_id", 21]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `update'
+Completed 200 OK in 16ms (Views: 3.8ms | ActiveRecord: 3.0ms | Allocations: 5535)
+
+
+Started GET "/events" for ::1 at 2021-01-29 13:53:06 -0600
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 2]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.7ms | Allocations: 4077)
+
+
+Started GET "/events" for ::1 at 2021-01-29 13:56:09 -0600
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 2]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.7ms | Allocations: 4077)
+
+
+Started GET "/events" for ::1 at 2021-01-29 13:56:53 -0600
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 2]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.9ms | Allocations: 4077)
+
+
+Started PATCH "/users/event1user5" for ::1 at 2021-01-29 13:57:02 -0600
+Processing by UsersController#update as JSON
+  Parameters: {"event_id"=>"1", "user_id"=>"5", "id"=>"event1user5", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `update'
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `update'
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mReservation Destroy (1.1ms)[0m  [1m[31mDELETE FROM "reservations" WHERE "reservations"."event_id" = ? AND "reservations"."user_id" = ?[0m  [["event_id", 1], ["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `update'
+Completed 200 OK in 123ms (Views: 3.0ms | ActiveRecord: 4.0ms | Allocations: 4960)
+
+
+Started GET "/events" for ::1 at 2021-01-29 13:57:36 -0600
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 2]]
+  ↳ app/controllers/events_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 1.2ms | Allocations: 3942)
+
+
+Started PATCH "/users/event1user22" for ::1 at 2021-01-29 13:57:40 -0600
+Processing by UsersController#update as JSON
+  Parameters: {"event_id"=>"1", "user_id"=>"22", "id"=>"event1user22", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `update'
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mReservation Destroy (0.6ms)[0m  [1m[31mDELETE FROM "reservations" WHERE "reservations"."event_id" = ? AND "reservations"."user_id" = ?[0m  [["event_id", 1], ["user_id", 22]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `update'
+Completed 200 OK in 18ms (Views: 5.7ms | ActiveRecord: 3.3ms | Allocations: 4822)
+
+
+Started POST "/users" for ::1 at 2021-01-29 14:01:25 -0600
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"tom", "email"=>"tom@email.com", "event_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."name" = ? LIMIT ?[0m  [["email", "tom@email.com"], ["name", "tom"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tom@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "tom"], ["email", "tom@email.com"], ["created_at", "2021-01-29 20:01:25.770026"], ["updated_at", "2021-01-29 20:01:25.770026"]]
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "tom@email.com"], ["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["event_id", 1], ["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mReservation Create (0.9ms)[0m  [1m[32mINSERT INTO "reservations" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 24], ["event_id", 1], ["created_at", "2021-01-29 20:01:25.792287"], ["updated_at", "2021-01-29 20:01:25.792287"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Completed 200 OK in 39ms (Views: 2.7ms | ActiveRecord: 7.0ms | Allocations: 14537)
+
+
+Started POST "/users" for ::1 at 2021-01-29 14:01:41 -0600
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Ian", "email"=>"ian@email.com", "event_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."name" = ? LIMIT ?[0m  [["email", "ian@email.com"], ["name", "Ian"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "ian@email.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["event_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mReservation Create (0.7ms)[0m  [1m[32mINSERT INTO "reservations" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["event_id", 2], ["created_at", "2021-01-29 20:01:41.077613"], ["updated_at", "2021-01-29 20:01:41.077613"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 2]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Completed 200 OK in 22ms (Views: 2.6ms | ActiveRecord: 4.1ms | Allocations: 7795)
+
+
+Started PATCH "/users/event1user1" for ::1 at 2021-01-29 14:01:54 -0600
+Processing by UsersController#update as JSON
+  Parameters: {"event_id"=>"1", "user_id"=>"1", "id"=>"event1user1", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `update'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mReservation Destroy (0.9ms)[0m  [1m[31mDELETE FROM "reservations" WHERE "reservations"."event_id" = ? AND "reservations"."user_id" = ?[0m  [["event_id", 1], ["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `update'
+Completed 200 OK in 19ms (Views: 6.4ms | ActiveRecord: 2.7ms | Allocations: 8621)
+
+
+Started PATCH "/users/event1user24" for ::1 at 2021-01-29 14:02:45 -0600
+Processing by UsersController#update as JSON
+  Parameters: {"event_id"=>"1", "user_id"=>"24", "id"=>"event1user24", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `update'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mReservation Destroy (1.7ms)[0m  [1m[31mDELETE FROM "reservations" WHERE "reservations"."event_id" = ? AND "reservations"."user_id" = ?[0m  [["event_id", 1], ["user_id", 24]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `update'
+Completed 200 OK in 18ms (Views: 1.9ms | ActiveRecord: 5.2ms | Allocations: 4685)
+
+
+Started POST "/users" for ::1 at 2021-01-29 14:02:54 -0600
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Jim", "email"=>"jim@email.com", "event_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."name" = ? LIMIT ?[0m  [["email", "jim@email.com"], ["name", "Jim"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "jim@email.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["event_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mReservation Create (0.8ms)[0m  [1m[32mINSERT INTO "reservations" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["event_id", 1], ["created_at", "2021-01-29 20:02:54.641560"], ["updated_at", "2021-01-29 20:02:54.641560"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "reservations" ON "users"."id" = "reservations"."user_id" WHERE "reservations"."event_id" = ?[0m  [["event_id", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Completed 200 OK in 38ms (Views: 16.8ms | ActiveRecord: 3.5ms | Allocations: 7538)
+
+
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "admins"[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "admins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "events"[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "date" varchar, "location" varchar, "description" varchar, "capacity" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "admin_id" integer)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE  INDEX "index_events_on_admin_id" ON "events" ("admin_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "reservations"[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "reservations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "event_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX "index_reservations_on_event_id" ON "reservations" ("event_id")[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX "index_reservations_on_user_id" ON "reservations" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "areservations" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "event_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_areservations_on_user_id" ON "areservations" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "tindex_areservations_on_event_id" ON "areservations" ("event_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "areservations" ("id","user_id","event_id","created_at","updated_at")
+                     SELECT "id","user_id","event_id","created_at","updated_at" FROM "reservations"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "reservations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "reservations" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "event_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_af7a37539f"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_reservations_on_event_id" ON "reservations" ("event_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_reservations_on_user_id" ON "reservations" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "reservations" ("id","user_id","event_id","created_at","updated_at")
+                     SELECT "id","user_id","event_id","created_at","updated_at" FROM "areservations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "areservations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "areservations" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "event_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "tindex_areservations_on_user_id" ON "areservations" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_areservations_on_event_id" ON "areservations" ("event_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "areservations" ("id","user_id","event_id","created_at","updated_at")
+                     SELECT "id","user_id","event_id","created_at","updated_at" FROM "reservations"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "reservations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "reservations" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "event_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_af7a37539f"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+, CONSTRAINT "fk_rails_48a92fce51"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_reservations_on_event_id" ON "reservations" ("event_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_reservations_on_user_id" ON "reservations" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "reservations" ("id","user_id","event_id","created_at","updated_at")
+                     SELECT "id","user_id","event_id","created_at","updated_at" FROM "areservations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "areservations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210108180759)[0m
+  [1m[35m (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210108173420),
+(20210108173956),
+(20210108180214),
+(20210108180236);
+
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-29 20:16:25.540727"], ["updated_at", "2021-01-29 20:16:25.540727"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "ccd95b72aa67af095f1ca06d2c46088ff8be3502"], ["created_at", "2021-01-29 20:16:25.550969"], ["updated_at", "2021-01-29 20:16:25.550969"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "admins"[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "admins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "events"[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "date" varchar, "location" varchar, "description" varchar, "capacity" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "admin_id" integer)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX "index_events_on_admin_id" ON "events" ("admin_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "reservations"[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "reservations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "event_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX "index_reservations_on_event_id" ON "reservations" ("event_id")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX "index_reservations_on_user_id" ON "reservations" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "areservations" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "event_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_areservations_on_user_id" ON "areservations" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_areservations_on_event_id" ON "areservations" ("event_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "areservations" ("id","user_id","event_id","created_at","updated_at")
+                     SELECT "id","user_id","event_id","created_at","updated_at" FROM "reservations"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "reservations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "reservations" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "event_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_af7a37539f"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_reservations_on_event_id" ON "reservations" ("event_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_reservations_on_user_id" ON "reservations" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "reservations" ("id","user_id","event_id","created_at","updated_at")
+                     SELECT "id","user_id","event_id","created_at","updated_at" FROM "areservations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "areservations"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "areservations" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "event_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_areservations_on_user_id" ON "areservations" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_areservations_on_event_id" ON "areservations" ("event_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "areservations" ("id","user_id","event_id","created_at","updated_at")
+                     SELECT "id","user_id","event_id","created_at","updated_at" FROM "reservations"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "reservations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "reservations" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "event_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_af7a37539f"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+, CONSTRAINT "fk_rails_48a92fce51"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_reservations_on_event_id" ON "reservations" ("event_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_reservations_on_user_id" ON "reservations" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "reservations" ("id","user_id","event_id","created_at","updated_at")
+                     SELECT "id","user_id","event_id","created_at","updated_at" FROM "areservations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "areservations"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210108180759)[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210108173420),
+(20210108173956),
+(20210108180214),
+(20210108180236);
+
+[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-29 20:16:25.673680"], ["updated_at", "2021-01-29 20:16:25.673680"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2021-01-29 20:16:25.680550"], ["key", "environment"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "ccd95b72aa67af095f1ca06d2c46088ff8be3502"], ["created_at", "2021-01-29 20:16:25.688199"], ["updated_at", "2021-01-29 20:16:25.688199"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."name" = ? AND "admins"."email" = ? AND "admins"."password" = ? LIMIT ?[0m  [["name", "Mr. Admin"], ["email", "business@email.com"], ["password", "super-secure"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Create (0.4ms)[0m  [1m[32mINSERT INTO "admins" ("name", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Mr. Admin"], ["email", "business@email.com"], ["password", "super-secure"], ["created_at", "2021-01-29 20:16:25.721958"], ["updated_at", "2021-01-29 20:16:25.721958"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."title" = ? AND "events"."date" = ? AND "events"."description" = ? AND "events"."location" = ? AND "events"."capacity" = ? LIMIT ?[0m  [["title", "Third Space Music Concert"], ["date", "Feb 21 7:30pm"], ["description", "Charity Livestream"], ["location", "Steinway Center"], ["capacity", 50], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("title", "date", "location", "description", "capacity", "created_at", "updated_at", "admin_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Third Space Music Concert"], ["date", "Feb 21 7:30pm"], ["location", "Steinway Center"], ["description", "Charity Livestream"], ["capacity", 50], ["created_at", "2021-01-29 20:16:25.772199"], ["updated_at", "2021-01-29 20:16:25.772199"], ["admin_id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."title" = ? AND "events"."date" = ? AND "events"."description" = ? AND "events"."location" = ? AND "events"."capacity" = ? LIMIT ?[0m  [["title", "Museum Event"], ["date", "March 14 5:30pm"], ["description", "Gallery Opening"], ["location", "MFAH"], ["capacity", 25], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("title", "date", "location", "description", "capacity", "created_at", "updated_at", "admin_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Museum Event"], ["date", "March 14 5:30pm"], ["location", "MFAH"], ["description", "Gallery Opening"], ["capacity", 25], ["created_at", "2021-01-29 20:16:25.781002"], ["updated_at", "2021-01-29 20:16:25.781002"], ["admin_id", 1]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? AND "users"."email" = ? LIMIT ?[0m  [["name", "Ian"], ["email", "ian@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ian@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ian"], ["email", "ian@email.com"], ["created_at", "2021-01-29 20:16:25.801071"], ["updated_at", "2021-01-29 20:16:25.801071"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReservation Create (0.4ms)[0m  [1m[32mINSERT INTO "reservations" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["event_id", 1], ["created_at", "2021-01-29 20:16:25.819847"], ["updated_at", "2021-01-29 20:16:25.819847"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "ian@email.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? AND "users"."email" = ? LIMIT ?[0m  [["name", "Jim"], ["email", "jim@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jim@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jim"], ["email", "jim@email.com"], ["created_at", "2021-01-29 20:16:25.830910"], ["updated_at", "2021-01-29 20:16:25.830910"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReservation Create (0.4ms)[0m  [1m[32mINSERT INTO "reservations" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["event_id", 1], ["created_at", "2021-01-29 20:16:25.836207"], ["updated_at", "2021-01-29 20:16:25.836207"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReservation Create (0.5ms)[0m  [1m[32mINSERT INTO "reservations" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["event_id", 2], ["created_at", "2021-01-29 20:16:25.842644"], ["updated_at", "2021-01-29 20:16:25.842644"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "jim@email.com"], ["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? AND "users"."email" = ? LIMIT ?[0m  [["name", "Bob"], ["email", "bob@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bob@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Bob"], ["email", "bob@email.com"], ["created_at", "2021-01-29 20:16:25.857336"], ["updated_at", "2021-01-29 20:16:25.857336"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReservation Create (0.4ms)[0m  [1m[32mINSERT INTO "reservations" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["event_id", 2], ["created_at", "2021-01-29 20:16:25.863871"], ["updated_at", "2021-01-29 20:16:25.863871"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "bob@email.com"], ["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m

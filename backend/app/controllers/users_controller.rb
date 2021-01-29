@@ -5,7 +5,7 @@ class UsersController < ApplicationController
         if user.valid?
             if event && !event.users.include?(user)
                 user.events << event
-                render json: { user: user, event: event }
+                render json: { user: user, event: event, event_users: event.users }
             else
                 errors = "#{user.name} is already RSVP'd to this event."
                 render json: { error: errors }
@@ -21,7 +21,7 @@ class UsersController < ApplicationController
         event = Event.find(params[:event_id])
         event.users.delete(user)
         
-        render json: { user: user, event: event }
+        render json: { user: user, event: event, event_users: event.users }
     end
 
 end

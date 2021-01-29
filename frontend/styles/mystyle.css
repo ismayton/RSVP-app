@@ -87,7 +87,6 @@ ul {
     max-width: 40%;
     margin: auto;
     border-radius: 10px;
-
 }
 
 .remove-user {
@@ -119,6 +118,7 @@ ul {
     width: 100%;
     min-width: 300px;
     margin-left: -9px;
-  }
+    pointer-events: none;
+}
 
   

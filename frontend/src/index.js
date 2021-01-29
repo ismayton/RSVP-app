@@ -3,7 +3,7 @@ const EVENTS_URL = `${BASE_URL}/events`
 const USERS_URL = `${BASE_URL}/users`
 
 class Event {
-    constructor(id, title, date, location, description, capacity, users) {
+    constructor(id, title, date, location, description, capacity, users = []) {
         this.id = id;
         this.title = title;
         this.date = date;
@@ -13,7 +13,11 @@ class Event {
         this.users = users;
     }
 
-    static eventFromJson(eventJson) {
+    static eventFromJson(json) {
+        return new Event(json.event.id, json.event.title, json.event.date, json.event.location, json.event.description, json.event.capacity, json.event_users)
+    }
+
+    static eventFromEventJson(eventJson) {
         return new Event(eventJson.id, eventJson.title, eventJson.date, eventJson.location, eventJson.description, eventJson.capacity, eventJson.users)
     }
 
@@ -61,7 +65,7 @@ function renderEvents(json) {
 
 // Render individual Event from specific event's Json //
 function renderEventInDOM(eventJson) {
-    let event = Event.eventFromJson(eventJson)
+    let event = Event.eventFromEventJson(eventJson)
 
     let eventDiv = document.createElement('div')
     eventDiv.classList.add('event')
@@ -199,13 +203,14 @@ function removeUserFromJson(json) {
 // STATUS BAR AND SEAT COUNT //
 
 function updateStatusBar(json) {
-    let event = Event.eventFromJson(json.event)
+    console.log(json)
+    let event = Event.eventFromJson(json)
     let statusBar = document.getElementById(event.id).getElementsByClassName('status-bar-fill')[0]
-    statusBar.style.width = `${100 - event.percent_full}%`
+    statusBar.style.width = `${event.percentFull}%`
 }
 
 function updateSeatCount(json) {
-    let event = Event.eventFromJson(json.event)
+    let event = Event.eventFromJson(json)
     let seatCount = document.getElementById(event.id).getElementsByClassName('seats-remaining')[0]
     seatCount.innerText = `Seats Remaining: ${event.seatsRemaining}`
 }
